@@ -1,7 +1,14 @@
-const alphabet = "абвгдеёжзиклмнопрстуфхцчшщъыьэюя";
+const alphabet = document.getElementById('alphabet');
+const letters = alphabet.innerHTML;
 
-const randomIndex = Math.floor(Math.random() * alphabet.length);
-const randomLetter = alphabet[randomIndex];
-console.log(randomLetter);
+const takeRandomLetter = () => {
+const randomIndex = Math.floor(Math.random() * 33);
+return letters[randomIndex];
+}
 
+const randomWord = takeRandomLetter() + takeRandomLetter() + takeRandomLetter() + takeRandomLetter();
+console.log(randomWord);
+
+const finalWord = document.getElementById('result');
+finalWord.textContent = randomWord;
 
