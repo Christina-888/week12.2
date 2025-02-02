@@ -2,7 +2,7 @@ const alphabet = document.getElementById('alphabet');
 const letters = alphabet.innerHTML;
 
 const takeRandomLetter = () => {
-const randomIndex = Math.floor(Math.random() * 32);
+const randomIndex = Math.floor(Math.random() * 33);
 return letters[randomIndex];
 }
 
